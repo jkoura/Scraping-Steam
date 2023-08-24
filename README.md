@@ -5,6 +5,7 @@
 This repo contains a programm written for a seminar at the Goethe University of Frankfurt am Main.
 The Steam Workshop Comments Scraper is a web scraping project built using Scrapy and Scrapy-Playwright. 
 This project aims to collect comments from a specific Steam Workshop page and save them for further analysis.
+The written code can be found under spiders - scraping steam
 
 ## Features
 
