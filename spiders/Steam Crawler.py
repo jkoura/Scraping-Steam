@@ -5,8 +5,8 @@ from scrapy.selector import Selector
 from ..items import WorkshopCommentsItem
 
 class A81tilesSpider(scrapy.Spider):
-    name = '81tiles'
-    start_urls = ['https://steamcommunity.com/sharedfiles/filedetails/?id=2881031511']
+    name = '81tiles' # select a Name that will call the Spider
+    start_urls = ['https://steamcommunity.com/sharedfiles/filedetails/?id=2881031511'] # Change the Url here
 
     def start_requests(self):
         yield scrapy.Request(
@@ -39,8 +39,8 @@ class A81tilesSpider(scrapy.Spider):
 
             await page.wait_for_selector('div.commentthread_comment_container')
 
-            content = await page.content()  # get the page content
-            selector = Selector(text=content)  # stick it in a scrapy selector
+            content = await page.content() 
+            selector = Selector(text=content)  
             for comment in selector.css("div.commentthread_comment"):
                 steam_item = WorkshopCommentsItem(
                     post_time=comment.xpath(".//span[@class='commentthread_comment_timestamp']/text()").get().strip(),
