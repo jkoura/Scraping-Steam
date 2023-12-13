@@ -8,11 +8,7 @@
 from itemadapter import ItemAdapter
 
 
-# alter cote: class QuotetutorialPipeline:
-# def process_item(self, item, spider):
-# return item
-
-#Felix Code
+# Optional Databank
 import sqlite3
 
 
